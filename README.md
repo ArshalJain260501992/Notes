@@ -6,7 +6,7 @@ Notes is platform to create, update, delete and check your to-do list and have i
 check it out at https://notesui.cfapps.io
 ### Tech
 
-GoLearn uses a number of open source projects to work properly:
+Notes uses a number of open source projects to work properly:
 
 * [Angular 4] - HTML enhanced for web apps!
 * [Visual Studio Code Editor] - awesome web-based text editor
