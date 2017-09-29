@@ -54,9 +54,10 @@ export class ToDoListComponent implements OnInit {
     if(!isDuplicate) {
       const note = new Note()
       note.name = defaultName;
+      this.notes.push(note);
       this.notesManagerService.addNote(note).then((response) => {
-        this.notes.push(JSON.parse(response._body));
-      });            
+        note.id = JSON.parse(response._body).id;
+      });             
       return;  
     }
    }
