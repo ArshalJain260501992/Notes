@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+ background-color: #ecc857;
+}
+hr {
+ border-color: white;
+}
+a{
+    cursor: pointer;
+}
+.nav {
+    background-color: darkslategrey;
+}
+.btn, .btn:hover {
+    background-color: white;
+    color: darkslategray;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

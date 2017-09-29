@@ -1,0 +1,13 @@
+---
+applications:
+- name: notes
+  memory: 516M
+  instances: 1
+  host: notes-app
+  domain: cfapps.io
+  buildpack: java_buildpack
+  path: .
+  services:
+  - mongodb
+  
+  

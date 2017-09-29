@@ -1,0 +1,28 @@
+<div class="well">
+    <div class="">
+        <input type="text" class="form-control note-title pull-left" 
+        (keyup)="notesManagerService.updateNote(note)" 
+        autocomplete="off"
+            autocorrect="off" autocapitalize="off" spellcheck="false" [(ngModel)]="note.name" />
+        <i class="glyphicon glyphicon-remove pull-right" (click)="removeNote(note)"></i>
+    </div>
+    <form *ngIf="note" (ngSubmit)="onSubmit()" #note="ngForm" novalidate>
+        <input type="text" name="newTask" class="form-control input new-task-input" placeholder="Task" [(ngModel)]="newTask" />
+    </form>
+    <div class="task-block">
+        <ul class="list-group">
+            <li class="list-group-item pending" *ngFor="let task of note.toDos;let i = index">
+                <input type="checkbox" title="complete" class="checkbox pull-left" autocomplete="off" autocorrect="off" autocapitalize="off"
+                    spellcheck="false" (ngModelChange)="onToggle($event, i)" ngModel/>&nbsp;{{task}}
+                <i class="glyphicon glyphicon-remove task-remove pull-right" title="Remove" (click)="onRemove(i)"></i></li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item completed" *ngFor="let task of note.completed;let i = index">
+                <input type="checkbox" (ngModelChange)="onToggle($event, i)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                    class="checkbox pull-left" ngModel="true" />&nbsp;
+                <del>{{task}}</del>
+            </li>
+        </ul>
+
+    </div>
+</div>

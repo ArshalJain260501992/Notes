@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-lg-11 col-md-11 col-sm-10 col-xs-8"></div>
+  <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4">
+    <button class="btn pull-right add-note-btn" title="Add List" (click)="addNote()">
+          <i class="glyphicon glyphicon-list"></i>
+        </button>
+  </div>
+</div>
+<br/>
+<br/>
+<br/>
+
+<div class="row task-row" *ngIf="notes.length > 0; else noNotesPresent">
+  <div class="col-xs-12 col-sm-4 col-lg-3 col-md-3" *ngFor="let note of notes; let i = index">
+    <app-to-do-note [note]="note"></app-to-do-note>
+  </div>
+</div>
+<ng-template #noNotesPresent>
+  <strong class="info-text">No notes created yet...!</strong>
+</ng-template>

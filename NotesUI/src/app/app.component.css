@@ -1,0 +1,10 @@
+.container {
+    background-color: #ecc857;
+    margin-top: 0px;
+    padding-top: 2%;
+    padding-right: 2.5%;
+    min-height: 80%;
+}
+.notes-container {
+    background-color: darkslategray;
+}

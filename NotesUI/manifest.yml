@@ -1,0 +1,8 @@
+---
+applications:
+- name: NotesUI
+  memory: 256M
+  buildpack: staticfile_buildpack
+  path: dist
+  routes:
+  - route: NotesUI.cfapps.io

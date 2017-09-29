@@ -1,0 +1,12 @@
+.info-text {
+    color: darkslategrey;
+}
+.add-note-btn {
+    position: fixed;
+    z-index: 2000;
+    font-weight: bold;
+    margin-right: 0px;
+}
+.task-row {
+    margin-right: 1%;
+}
