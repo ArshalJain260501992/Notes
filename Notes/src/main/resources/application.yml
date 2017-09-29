@@ -7,8 +7,7 @@ spring:
 #      host: localhost
 #      port: 51544
 #      database: notes
-#      uri: mongodb://localhost/goLearn
-      uri: mongodb://arshalJain:12345@ds123614.mlab.com:23614/notes
+     uri: mongodb://localhost/notes
       #repositories:
         #enabled: true
         
